@@ -1,0 +1,47 @@
+<html>
+  <body>
+    <textarea id="demo" class="view"></textarea>
+    <h2>repl</h2>
+    <label for="output">out:</label>
+    <textarea id="output" class="view"></textarea>
+    <br>
+    <label for="input">in:</label>
+    <input id="input" type="text">
+  </body>
+
+  <style>
+   .view { display: block; width: 100%; }
+  </style>
+
+  <script>
+    let demo = document.getElementById("demo")
+
+    let output = document.getElementById("output")
+    output.log = (text) => {
+      console.log(text)
+      output.innerHTML += JSON.stringify(text) + "\n"
+    }
+
+    let input = document.getElementById("input")
+    input.addEventListener("input", (e) => output.log(eval(e.target.value)))
+
+    const left = (rule) => eval(Object.keys(rule)[0])
+    const right = (rule) => Object.values(rule
+    const spine = (expression) => Object.keys(expression)[0]
+
+    const rewrite = (expression, rule) => {
+      for(term in expression) {
+        if(term in left(rule)) {
+          delete expression[term]
+          expression[left(rule)] = right(rule)
+        } else {
+          expression[term] = rewrite(expression[term], rule)
+        }
+      }
+      return expression
+    }
+
+    let f_exp = rewrite({f:{x:{},x:{}}}, {"{f:{x:{},x:{}}}":{x:{}}})
+    console.assert(f_exp == {x:{}}, f_exp)
+  </script>
+</html>
