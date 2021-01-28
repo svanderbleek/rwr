@@ -1,4 +1,4 @@
-# rwrr
+# rwr
 
 the internet's cutest javascript term rewriting system
 
@@ -13,9 +13,9 @@ Roadmap
 - [ ] rwrr.webasm compile to webassembly?
 - [ ] apply to rwrr.lof by buidling self interpreting spartan
 
-## rwrr language
+## rwr language
 
-We will implement rwrr a javascript rewriting interpreter. The API is minimal.
+We will implement rwr a javascript rewriting interpreter. The API is minimal.
 
 ```
 match(expression, rule) 
@@ -26,6 +26,10 @@ evaluate(expression, environment)
 It is inspired by mathematica and TRS presented in literature such as Term Rewriting Systems and Advanced Topics in Term Rewriting.
 
 Rwrrr implements a rewriting logic and type checking ideas can be ported through this logic.
+
+## Impelmentations
+
+* http://www.jaist.ac.jp/~hirokawa/tool/
 
 ## Thoerem Proving
 
