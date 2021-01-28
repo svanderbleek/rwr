@@ -1,6 +1,6 @@
 # rwr
 
-the world's cutest javascript term rewriting system
+world's cutest javascript term rewriting system
 
 Roadmap
 
