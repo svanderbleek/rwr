@@ -5,13 +5,13 @@ the internet's cutest javascript term rewriting system
 Roadmap
 
 - [ ] representations for expression, term
-- [ ] rwrr.rewrite(expression, rule) action
-- [ ] rwrr.logic rewrite logic, proofs in rewrite systems
-- [ ] rwrr.wolf mathematica interop
-- [ ] rwrr.redex racket redex implementation
-- [ ] rwrr.turnstile racket turnstile implementation
-- [ ] rwrr.webasm compile to webassembly?
-- [ ] apply to rwrr.lof by buidling self interpreting spartan
+- [ ] rwr.rewrite(expression, rule) action
+- [ ] rwr.logic rewrite logic, proofs in rewrite systems
+- [ ] rwr.wolf mathematica interop
+- [ ] rwr.redex racket redex implementation
+- [ ] rwr.turnstile racket turnstile implementation
+- [ ] rwr.webasm compile to webassembly?
+- [ ] apply to rwr.lof by buidling self interpreting spartan
 
 ## rwr language
 
