@@ -1,12 +1,22 @@
 <html>
   <body>
-    <textarea id="demo" class="view"></textarea>
-    <h2>repl</h2>
-    <label for="output">out:</label>
-    <textarea id="output" class="view"></textarea>
+    <h2>Term Rewriting</h2>
+    <p>Syntax<p>
+    <code id="expression">
+      ["f",["x", "x"]]
+    </code>
     <br>
-    <label for="input">in:</label>
-    <input id="input" type="text">
+    <code id="rule1">
+      [["f",["x","x"]],["x"]]
+    </code>
+    <button id="button1">rewrite</button>
+    <br>
+    <code id="rule2">
+      [["x"],["y"]]
+    </code>
+    <button id="button2">rewrite</button>
+    <br>
+    <textarea id="out" class="view"></textarea>
   </body>
 
   <style>
@@ -14,34 +24,27 @@
   </style>
 
   <script>
-    let demo = document.getElementById("demo")
-
-    let output = document.getElementById("output")
-    output.log = (text) => {
-      console.log(text)
-      output.innerHTML += JSON.stringify(text) + "\n"
-    }
-
-    let input = document.getElementById("input")
-    input.addEventListener("input", (e) => output.log(eval(e.target.value)))
-
-    const left = (rule) => eval(Object.keys(rule)[0])
-    const right = (rule) => Object.values(rule
-    const spine = (expression) => Object.keys(expression)[0]
-
+    const jsoneq = (a, b) => JSON.stringify(a) == JSON.stringify(b)
     const rewrite = (expression, rule) => {
-      for(term in expression) {
-        if(term in left(rule)) {
-          delete expression[term]
-          expression[left(rule)] = right(rule)
-        } else {
-          expression[term] = rewrite(expression[term], rule)
-        }
+      if(jsoneq(expression, rule[0])) return rule[1]
+      let [app, args] = expression
+      if(app && args && args.length) {
+        return [rewrite(app, rule), args.map((arg) => rewrite(arg, rule))]
+      } else {
+        return expression
       }
-      return expression
     }
-
-    let f_exp = rewrite({f:{x:{},x:{}}}, {"{f:{x:{},x:{}}}":{x:{}}})
-    console.assert(f_exp == {x:{}}, f_exp)
+    let out = document.getElementById("out")
+    let button1 = document.getElementById("button1")
+    let button2 = document.getElementById("button2")
+    let rule1 = document.getElementById("rule1").innerHTML
+    let rule2 = document.getElementById("rule2").innerHTML
+    let write = (expression) => out.innerHTML = JSON.stringify(expression) + "\n"
+    let rewrite_rule = (rule) => {
+      let expression = document.getElementById("expression").innerHTML
+      write(eval("rewrite("+expression+","+rule+")"))
+    }
+    button1.addEventListener("click", () => rewrite_rule(rule1))
+    button2.addEventListener("click", () => rewrite_rule(rule2))
   </script>
 </html>
