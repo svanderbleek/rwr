@@ -16,6 +16,11 @@
     </code>
     <button id="button2">rewrite</button>
     <br>
+    <code id="rule3">
+      [["f"],["g"]]
+    </code>
+    <button id="button3">rewrite</button>
+    <br>
     <textarea id="out" class="view"></textarea>
   </body>
 
@@ -35,16 +40,18 @@
       }
     }
     let out = document.getElementById("out")
-    let button1 = document.getElementById("button1")
-    let button2 = document.getElementById("button2")
-    let rule1 = document.getElementById("rule1").innerHTML
-    let rule2 = document.getElementById("rule2").innerHTML
     let write = (expression) => out.innerHTML = JSON.stringify(expression) + "\n"
     let rewrite_rule = (rule) => {
       let expression = document.getElementById("expression").innerHTML
       write(eval("rewrite("+expression+","+rule+")"))
     }
-    button1.addEventListener("click", () => rewrite_rule(rule1))
-    button2.addEventListener("click", () => rewrite_rule(rule2))
+    let button_and_rule = (id) => {
+      let button = document.getElementById("button"+id)
+      let rule = document.getElementById("rule"+id).innerHTML
+      button.addEventListener("click", () => rewrite_rule(rule))
+    }
+    button_and_rule("1")
+    button_and_rule("2")
+    button_and_rule("3")
   </script>
 </html>
