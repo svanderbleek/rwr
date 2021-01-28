@@ -20,6 +20,7 @@ Roadmap
 * markov algorithm https://esolangs.org/wiki/Markov_algorithm
 * refal http://www.math.bas.bg/bantchev/place/refal.html
 * snobol http://www.math.bas.bg/bantchev/place/snobol.html
+* pure https://code.google.com/archive/p/pure-lang/
 
 ## rwr language
 
