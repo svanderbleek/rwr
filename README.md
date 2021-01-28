@@ -13,6 +13,10 @@ Roadmap
 - [ ] rwr.webasm compile to webassembly?
 - [ ] apply to rwr.lof by buidling self interpreting spartan
 
+## TRS
+
+* lectures https://web.archive.org/web/20180308210524/https://www.cs.vu.nl/~tcs/trs/
+
 ## rwr language
 
 ee will implement rwr a javascript rewriting interpreter. The API is minimal.
