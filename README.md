@@ -21,6 +21,7 @@ Roadmap
 * refal http://www.math.bas.bg/bantchev/place/refal.html
 * snobol http://www.math.bas.bg/bantchev/place/snobol.html
 * pure https://code.google.com/archive/p/pure-lang/
+* https://www.stephendiehl.com/posts/exotic02.html
 
 ## editor
 
