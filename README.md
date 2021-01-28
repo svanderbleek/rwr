@@ -16,7 +16,7 @@ Roadmap
 ## TRS
 
 * lectures https://web.archive.org/web/20180308210524/https://www.cs.vu.nl/~tcs/trs/
-* thue https://catseye.tc/article/Language_Implementations#thuerb
+* thue https://github.com/catseye/Thue
 
 ## rwr language
 
