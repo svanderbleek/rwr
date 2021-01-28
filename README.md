@@ -1,6 +1,6 @@
 # rwr
 
-the internet's cutest javascript term rewriting system
+the world's cutest javascript term rewriting system
 
 Roadmap
 
@@ -15,7 +15,7 @@ Roadmap
 
 ## rwr language
 
-We will implement rwr a javascript rewriting interpreter. The API is minimal.
+ee will implement rwr a javascript rewriting interpreter. The API is minimal.
 
 ```
 match(expression, rule) 
@@ -25,7 +25,7 @@ evaluate(expression, environment)
 
 It is inspired by mathematica and TRS presented in literature such as Term Rewriting Systems and Advanced Topics in Term Rewriting.
 
-Rwrrr implements a rewriting logic and type checking ideas can be ported through this logic.
+rwr implements a rewriting logic and type checking ideas can be ported through this logic.
 
 ## Impelmentations
 
@@ -47,19 +47,11 @@ ReplaceAll [Object, [Rules]]
 * lisp mathematica https://dl.acm.org/doi/abs/10.1145/1089419.1089421?download=true
 * matematica evaluation https://reference.wolfram.com/language/tutorial/EvaluationOfExpressionsOverview.html
 
-Expression
+we use a close version:
 
 ```
-{Expression:{}}
+["f" ["x"]]
 ```
-
-Rewrite
-
-```
-replace({Expression1:{}}, {Expression1: {Expression2: {}}) == {Expression2:{}}
-```
-
-should implement what is needed for
 
 * Simulation of Turing machines by a regular rewrite rule
 
