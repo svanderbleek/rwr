@@ -22,6 +22,11 @@ Roadmap
 * snobol http://www.math.bas.bg/bantchev/place/snobol.html
 * pure https://code.google.com/archive/p/pure-lang/
 
+## editor
+
+* https://www.maria.cloud/quickstart
+* https://www.unisonweb.org/2020/03/12/march-update/
+
 ## rwr language
 
 ee will implement rwr a javascript rewriting interpreter. The API is minimal.
