@@ -17,6 +17,9 @@ Roadmap
 
 * lectures https://web.archive.org/web/20180308210524/https://www.cs.vu.nl/~tcs/trs/
 * thue https://github.com/catseye/Thue
+* markov algorithm https://esolangs.org/wiki/Markov_algorithm
+* refal http://www.math.bas.bg/bantchev/place/refal.html
+* snobol http://www.math.bas.bg/bantchev/place/snobol.html
 
 ## rwr language
 
