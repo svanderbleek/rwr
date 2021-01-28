@@ -23,6 +23,78 @@ Roadmap
 * pure https://agraef.github.io/pure-lang/
 * https://www.stephendiehl.com/posts/exotic02.html
 
+## Examples
+
+from http://aprove.informatik.rwth-aachen.de/help_new/trs.html
+source code https://github.com/aprove-developers/aprove-releases
+
+```
+Simple Example
+      (VAR x y)
+      (RULES
+
+        plus(s(s(x)),y) -> s(plus(x,s(y)))
+        plus(x,s(s(y))) -> s(plus(s(x),y))
+        plus(s(0),y) -> s(y)
+        plus(0,y) -> y
+
+        ack(0,y) -> s(y)
+        ack(s(x),0) -> ack(x,s(0))
+        ack(s(x),s(y)) -> ack(x,plus(y,ack(s(x),y)))
+      )
+Context Sensitive Example
+      (VAR X Y Z)
+      (STRATEGY CONTEXTSENSITIVE
+        (and 1)
+        (true)
+        (false)
+        (if 1)
+        (add 1)
+        (0)
+        (s)
+        (first 1 2)
+        (nil)
+        (cons)
+        (from)
+      )
+      (RULES
+      and(true,X) -> X
+      and(false,Y) -> false
+      if(true,X,Y) -> X
+      if(false,X,Y) -> Y
+      add(0,X) -> X
+      add(s(X),Y) -> s(add(X,Y))
+      first(0,X) -> nil
+      first(s(X),cons(Y,Z)) -> cons(Y,first(X,Z))
+      from(X) -> cons(X,from(s(X)))
+      )
+Equational Example
+      (VAR x y u v w)
+
+      (RULES
+        minus(plus(x, y), y) -> x
+        div(0, plus(y, 1)) -> 0
+        div(plus(x, 1),plus(y, 1)) -> plus(div(minus(x, y), plus(y, 1)), 1)
+      )
+      (THEORY (EQUATIONS
+        plus(0, 0) == 0
+        plus(1, 0) == 1
+        plus(0, 1) == 1
+        plus(u, plus(v, w)) == plus(plus(u, v), w)
+      ))
+AC Example
+      (VAR x y)
+      (THEORY (AC plus))
+      (RULES
+        plus(x, 0) -> x
+        plus(x, s(y)) -> s(plus(x, y))
+      )
+```
+
+## Termination
+
+* http://aprove.informatik.rwth-aachen.de/
+
 ## editor
 
 * https://www.maria.cloud/quickstart
