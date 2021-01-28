@@ -69,12 +69,6 @@ theory
 * closure calculus? https://dl.acm.org/doi/10.1145/3294032.3294085
 * binders and alpha for free?
 
-
-
-## Weird
-
-* Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy https://arxiv.org/pdf/1803.08725.pdf
-
 ## Quantifier Elimination
 
 * Computation-Oriented Reductions of Predicate to Propositional Logic
@@ -88,4 +82,9 @@ theory
 ## Redex
 
 * https://github.com/racket/redex
+
+## Weird
+
+* Fully Automated HTML and Javascript Rewriting for Constructing a Self-healing Web Proxy https://arxiv.org/pdf/1803.08725.pdf
+
 
