@@ -59,6 +59,10 @@ theory
 
 * Computing with Rewrite Systems https://core.ac.uk/download/pdf/82345385.pdf
 
+## Parser
+
+* Adaptive parser https://github.com/jarble/adaptive_parser
+
 ## JavaScript metatheory
 
 * mechanized metatheory for the mases https://repository.upenn.edu/cgi/viewcontent.cgi?article=1248&context=cis_papers
