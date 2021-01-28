@@ -26,7 +26,6 @@ Roadmap
 ## Examples
 
 * from http://aprove.informatik.rwth-aachen.de/help_new/trs.html
-* source code https://github.com/aprove-developers/aprove-releases
 
 ```
 Simple Example
