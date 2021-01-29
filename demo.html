@@ -5,31 +5,41 @@
     <code id="exp">
       [[["f",["x", "x"]], [["f"],["g"]]],
        [["f",["x", "x"]], [["x"],["y"]]],
-       [["f",["x", "x"]], [[f, ["x", "x"]],["x"]]]]
+       [["f",["x", "x"]], [["f", ["x", "x"]],["x"]]]]
     </code>
     <button id="run">run</button>
-    <textarea id="out"></textarea>
+    <code id="out"></code>
   </body>
 
   <style>
+   #exp { display: block; white-space: pre-wrap; }
    #out { display: block; width: 100%; font: monospace; }
   </style>
 
   <script>
+    const jseq = (a, b) => JSON.stringify(a) == JSON.stringify(b)
     const rewrite = (expression, rule) => {
-      if(expression == rule[0]) return rule[1]
-      try {
-        [app, [args]] = expression
-        return [rewrite(app, rule), [rewrite(args, rule)]]
-      } catch {
-        return expression.map((e) => rewrite(e, rule))
-      }
+      if(jseq(expression, rule[0])) return rule[1]
+      if(expression[1] && expression[1].length) return [rewrite([expression[0]], rule), expression[1].map((e) => rewrite([e], rule))]
+      if(expression.map) return expression.map((e) => rewrite(e, rule))
+      return expression
     }
 
    const out = document.getElementById("out")
    const exp = document.getElementById("exp")
    const run = document.getElementById("run")
 
-   run.addEventListener("click", () => out.innerHTML = JSON.stringify(eval(exp.innerHTML).map((e, r) => rewrite(e, r))))
+   run.addEventListener("click", () => {
+     const examples = eval(exp.innerHTML)
+     console.log("EXPRESSION")
+     console.log(JSON.stringify(examples[1][0]))
+     console.log("RULE A")
+     console.log(JSON.stringify(examples[1][1][0]))
+     console.log("RULE B")
+     console.log(JSON.stringify(examples[1][1][1]))
+     console.log("REWRITE")
+     console.log(JSON.stringify(rewrite(examples[1][0], examples[1][1])))
+     out.innerHTML = JSON.stringify(examples.map(([e, r]) => [e, r, rewrite(e, r)]))
+   })
   </script>
 </html>
