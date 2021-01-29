@@ -3,9 +3,10 @@
     <h2>Term Rewriting</h2>
     <p>Syntax<p>
     <code id="exp">
-      [[["f",["x", "x"]], [["f"],["g"]]],
-       [["f",["x", "x"]], [["x"],["y"]]],
-       [["f",["x", "x"]], [["f", ["x", "x"]],["x"]]]]
+      [[["f", ["x", "x"]], [["f"], ["g"]]],
+       [["f", "f"], [["f"], ["g"]]],
+       [["f", ["x", "x"]], [["x"], ["y"]]],
+       [["f", ["x", "x"]], [["f", ["x", "x"]], ["x"]]]]
     </code>
     <button id="run">run</button>
     <code id="out"></code>
@@ -20,8 +21,8 @@
     const jseq = (a, b) => JSON.stringify(a) == JSON.stringify(b)
     const rewrite = (expression, rule) => {
       if(jseq(expression, rule[0])) return rule[1]
-      if(expression[1] && expression[1].length) return [rewrite([expression[0]], rule), expression[1].map((e) => rewrite([e], rule))]
-      if(expression.map) return expression.map((e) => rewrite(e, rule))
+      if(expression[1] && expression[1].map) return [rewrite([expression[0]], rule), expression[1].flatMap((e) => rewrite([e], rule))]
+      if(expression.map && expression.length > 1) return expression.flatMap((e) => rewrite([e], rule))
       return expression
     }
 
