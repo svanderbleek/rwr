@@ -13,6 +13,10 @@ Roadmap
 - [ ] rwr.webasm compile to webassembly?
 - [ ] apply to rwr.lof by buidling self interpreting spartan
 
+## Unification
+
+* https://github.com/bramstein/junify/blob/master/lib/unification.js
+
 ## TRS
 
 * lectures https://web.archive.org/web/20180308210524/https://www.cs.vu.nl/~tcs/trs/
