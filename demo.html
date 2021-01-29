@@ -1,7 +1,10 @@
 <html>
   <body>
     <h2>Term Rewriting</h2>
-    <p>Syntax<p>
+    <h3>Syntax</h3>
+    <p>
+      The syntax is expression = [term] | [app [args]]
+    </p>
     <code id="exp">
       [[["f", ["x", "x"]], [["f"], ["g"]]],
        [["f", "f"], [["f"], ["g"]]],
@@ -10,24 +13,18 @@
     </code>
     <button id="run">run</button>
     <code id="out"></code>
-    <p>Algorithm</p>
+    <h3>Algorithm</h3>
+    <p>The essense of the algorithm for rewriting is</p>
     <code>
-      if(jseq(expression, rule[0])) return rule[1]
-      if(expression[1] && expression[1].map) return [rewrite([expression[0]], rule), expression[1].flatMap((e) => rewrite([e], rule))]
-      if(expression.map && expression.length > 1) return expression.flatMap((e) => rewrite([e], rule))
-      return expression
-    </code>
-    <p>
-      The essense of the matching algorithm is<br>
-      expresion == rule left => rule right<br>
-      expression is [app, [args]] => [rewrite(app), [rewrite(args)]]<br>
+      expresion == rule left => rule right
+      expression is [app, [args]] => [rewrite(app), [rewrite(args)]]
       otherwise => rewrite expression
-    </p>
+    </code>
   </body>
 
   <style>
-   code { display: block; white-space: pre-wrap; }
-   #out { display: block; width: 100%; font: monospace; }
+    code { display: block; white-space: pre-wrap; }
+    #out { display: block; width: 100%; font: monospace; }
   </style>
 
   <script>
