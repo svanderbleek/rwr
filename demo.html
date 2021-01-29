@@ -2,56 +2,34 @@
   <body>
     <h2>Term Rewriting</h2>
     <p>Syntax<p>
-    <code id="expression">
-      ["f",["x", "x"]]
+    <code id="exp">
+      [[["f",["x", "x"]], [["f"],["g"]]],
+       [["f",["x", "x"]], [["x"],["y"]]],
+       [["f",["x", "x"]], [[f, ["x", "x"]],["x"]]]]
     </code>
-    <br>
-    <code id="rule1">
-      [["f",["x","x"]],["x"]]
-    </code>
-    <button id="button1">rewrite</button>
-    <br>
-    <code id="rule2">
-      [["x"],["y"]]
-    </code>
-    <button id="button2">rewrite</button>
-    <br>
-    <code id="rule3">
-      [["f"],["g"]]
-    </code>
-    <button id="button3">rewrite</button>
-    <br>
-    <textarea id="out" class="view"></textarea>
+    <button id="run">run</button>
+    <textarea id="out"></textarea>
   </body>
 
   <style>
-   .view { display: block; width: 100%; }
+   #out { display: block; width: 100%; font: monospace; }
   </style>
 
   <script>
-    const jsoneq = (a, b) => JSON.stringify(a) == JSON.stringify(b)
     const rewrite = (expression, rule) => {
-      if(jsoneq(expression, rule[0])) return rule[1]
-      let [app, args] = expression
-      if(app && args && args.length) {
-        return [rewrite(app, rule), args.map((arg) => rewrite(arg, rule))]
-      } else {
-        return expression
+      if(expression == rule[0]) return rule[1]
+      try {
+        [app, [args]] = expression
+        return [rewrite(app, rule), [rewrite(args, rule)]]
+      } catch {
+        return expression.map((e) => rewrite(e, rule))
       }
     }
-    let out = document.getElementById("out")
-    let write = (expression) => out.innerHTML = JSON.stringify(expression) + "\n"
-    let rewrite_rule = (rule) => {
-      let expression = document.getElementById("expression").innerHTML
-      write(eval("rewrite("+expression+","+rule+")"))
-    }
-    let button_and_rule = (id) => {
-      let button = document.getElementById("button"+id)
-      let rule = document.getElementById("rule"+id).innerHTML
-      button.addEventListener("click", () => rewrite_rule(rule))
-    }
-    button_and_rule("1")
-    button_and_rule("2")
-    button_and_rule("3")
+
+   const out = document.getElementById("out")
+   const exp = document.getElementById("exp")
+   const run = document.getElementById("run")
+
+   run.addEventListener("click", () => out.innerHTML = JSON.stringify(eval(exp.innerHTML).map((e, r) => rewrite(e, r))))
   </script>
 </html>
