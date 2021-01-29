@@ -10,10 +10,23 @@
     </code>
     <button id="run">run</button>
     <code id="out"></code>
+    <p>Algorithm</p>
+    <code>
+      if(jseq(expression, rule[0])) return rule[1]
+      if(expression[1] && expression[1].map) return [rewrite([expression[0]], rule), expression[1].flatMap((e) => rewrite([e], rule))]
+      if(expression.map && expression.length > 1) return expression.flatMap((e) => rewrite([e], rule))
+      return expression
+    </code>
+    <p>
+      The essense of the matching algorithm is<br>
+      expresion == rule left => rule right<br>
+      expression is [app, [args]] => [rewrite(app), [rewrite(args)]]<br>
+      otherwise => rewrite expression
+    </p>
   </body>
 
   <style>
-   #exp { display: block; white-space: pre-wrap; }
+   code { display: block; white-space: pre-wrap; }
    #out { display: block; width: 100%; font: monospace; }
   </style>
 
@@ -32,14 +45,6 @@
 
    run.addEventListener("click", () => {
      const examples = eval(exp.innerHTML)
-     console.log("EXPRESSION")
-     console.log(JSON.stringify(examples[1][0]))
-     console.log("RULE A")
-     console.log(JSON.stringify(examples[1][1][0]))
-     console.log("RULE B")
-     console.log(JSON.stringify(examples[1][1][1]))
-     console.log("REWRITE")
-     console.log(JSON.stringify(rewrite(examples[1][0], examples[1][1])))
      out.innerHTML = JSON.stringify(examples.map(([e, r]) => [e, r, rewrite(e, r)]))
    })
   </script>
