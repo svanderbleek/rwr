@@ -17,6 +17,8 @@ Roadmap
 
 * https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.35.9681&rep=rep1&type=pdf
 
+* what the hell wolfy doin https://www.wolframphysics.org/technical-introduction/basic-form-of-models/basic-structure/
+
 ## Unification
 
 * https://github.com/bramstein/junify/blob/master/lib/unification.js
