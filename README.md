@@ -24,6 +24,11 @@ Roadmap
 * https://github.com/mhuebert/maria
 * https://docs.racket-lang.org/quick/
 
+* http://www.cs.tau.ac.il/~nachum/papers/taste-fixed.pdf
+
+> Rewrite systems have long been used as decision procedures for validity in equational theories, that is,
+for truth of an equation in all models of the theory.
+
 ## Unification
 
 * https://github.com/bramstein/junify/blob/master/lib/unification.js
