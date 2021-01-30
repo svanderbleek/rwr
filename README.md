@@ -19,6 +19,8 @@ Roadmap
 
 * what the hell wolfy doin https://www.wolframphysics.org/technical-introduction/basic-form-of-models/basic-structure/
 
+* apply to https://github.com/sicmutils/sicmutils
+
 ## Unification
 
 * https://github.com/bramstein/junify/blob/master/lib/unification.js
