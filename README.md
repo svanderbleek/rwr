@@ -151,6 +151,8 @@ rwr implements a rewriting logic and type checking ideas can be ported through t
 ## Thoerem Proving
 
 * Term rewriting and beyond — theorem proving in Isabelle
+* https://www1.chapman.edu/~jipsen/PCP/PCPhelp.html
+* a logical approach to discrete math
 
 ## Rewriting
 
