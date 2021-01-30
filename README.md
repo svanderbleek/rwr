@@ -123,6 +123,7 @@ AC Example
 
 * http://aprove.informatik.rwth-aachen.de/
 * Mechanizing and Improving Dependency Pairs http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=32F81BEA61AC7E7E5B3B261650ACB70A?doi=10.1.1.103.302&rep=rep1&type=pdf
+* Counter examples in Abstract Rewriting Produced Automatically
 
 ## Logic
 
