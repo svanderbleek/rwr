@@ -43,6 +43,7 @@ for truth of an equation in all models of the theory.
 * pure https://agraef.github.io/pure-lang/
 * https://www.stephendiehl.com/posts/exotic02.html
 * maude http://maude.lcc.uma.es/maude31-manual-html/maude-manual.html
+* egison
 
 ## Examples
 
