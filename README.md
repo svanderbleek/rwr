@@ -42,6 +42,7 @@ for truth of an equation in all models of the theory.
 * https://www.stephendiehl.com/posts/exotic02.html
 * maude http://maude.lcc.uma.es/maude31-manual-html/maude-manual.html
 * egison https://www.egison.org/
+* stratego http://strategoxt.org/Stratego/
 * haskell 
   * https://github.com/pruvisto/TRS
   * https://arxiv.org/abs/1307.2328
@@ -153,6 +154,8 @@ rwr implements a rewriting logic and type checking ideas can be ported through t
 * Term rewriting and beyond — theorem proving in Isabelle
 * https://www1.chapman.edu/~jipsen/PCP/PCPhelp.html
 * a logical approach to discrete math
+* minilog http://www.mathematik.uni-muenchen.de/~logik/minlog/index.php
+* spass https://www.mpi-inf.mpg.de/departments/automation-of-logic/software/spass-workbench/
 
 ## Rewriting
 
