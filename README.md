@@ -43,6 +43,7 @@ for truth of an equation in all models of the theory.
 * maude http://maude.lcc.uma.es/maude31-manual-html/maude-manual.html
 * egison https://www.egison.org/
 * stratego http://strategoxt.org/Stratego/
+* cafeobj https://cafeobj.org/
 * haskell 
   * https://github.com/pruvisto/TRS
   * https://arxiv.org/abs/1307.2328
