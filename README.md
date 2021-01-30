@@ -121,6 +121,11 @@ AC Example
 * http://aprove.informatik.rwth-aachen.de/
 * Mechanizing and Improving Dependency Pairs http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=32F81BEA61AC7E7E5B3B261650ACB70A?doi=10.1.1.103.302&rep=rep1&type=pdf
 
+## Logic
+
+* https://en.wikipedia.org/wiki/Rewriting#Logic
+* K: a Rewrite-based Framework for Modular Language Design, Semantics, Analysis and Implementation
+
 ## editor
 
 * https://www.maria.cloud/quickstart
