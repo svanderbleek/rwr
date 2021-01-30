@@ -4,14 +4,9 @@ world's cutest javascript term rewriting system
 
 Roadmap
 
-- [ ] representations for expression, term
-- [ ] rwr.rewrite(expression, rule) action
-- [ ] rwr.logic rewrite logic, proofs in rewrite systems
-- [ ] rwr.wolf mathematica interop
-- [ ] rwr.redex racket redex implementation
-- [ ] rwr.turnstile racket turnstile implementation
-- [ ] rwr.webasm compile to webassembly?
-- [ ] apply to rwr.lof by buidling self interpreting spartan
+- [ ] redo wrong implementation in general context substitution framework
+- [ ] eval with env
+- [ ] educational content following https://core.ac.uk/download/pdf/82345385.pdf
 
 ## Motivation 
 
