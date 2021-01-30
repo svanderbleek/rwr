@@ -21,6 +21,9 @@ Roadmap
 
 * apply to https://github.com/sicmutils/sicmutils
 
+* https://github.com/mhuebert/maria
+* https://docs.racket-lang.org/quick/
+
 ## Unification
 
 * https://github.com/bramstein/junify/blob/master/lib/unification.js
