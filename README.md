@@ -26,6 +26,10 @@ Roadmap
 > Rewrite systems have long been used as decision procedures for validity in equational theories, that is,
 for truth of an equation in all models of the theory.
 
+## Machine
+
+* Epic https://web.archive.org/web/20070329194924/http://www.babelfish.nl/intro.html
+
 ## Unification
 
 * https://github.com/bramstein/junify/blob/master/lib/unification.js
