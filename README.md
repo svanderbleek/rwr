@@ -33,6 +33,8 @@ for truth of an equation in all models of the theory.
 ## Machine
 
 * Epic https://web.archive.org/web/20070329194924/http://www.babelfish.nl/intro.html
+* Abstract Rewriting Machine https://en.wikipedia.org/wiki/Abstract_rewriting_machine
+  * Within ARM's reach: compilation of left-linear rewrite systems via minimal rewrite systems
 
 ## Unification
 
