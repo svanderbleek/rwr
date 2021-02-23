@@ -26,6 +26,8 @@ Roadmap
 > Rewrite systems have long been used as decision procedures for validity in equational theories, that is,
 for truth of an equation in all models of the theory.
 
+* Equational Logic and Rewriting
+
 ## Modern
 
 * Higher-Dimensional Rewriting and Applications http://www.lix.polytechnique.fr/Labo/Samuel.Mimram//2015/02/09/hdra/
